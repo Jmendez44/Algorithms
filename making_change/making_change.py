@@ -2,8 +2,18 @@
 
 import sys
 
+
 def making_change(amount, denominations):
-  pass 
+  if amount <= 1:
+    return amount
+
+  elif amount > 1:
+    coins = denominations
+    for i in coins:
+      if i > amount:
+        tooLarge = coins.index(i, 0, len(coins))
+        print(tooLarge)
+
 
 
 if __name__ == "__main__":
